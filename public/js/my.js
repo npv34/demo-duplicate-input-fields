@@ -49,5 +49,14 @@ $(document).ready(function () {
                 })
             }
         })
+
+        //endable button clear message
+        $('#clear-message').removeAttr('disabled')
+    })
+
+    //remove all message error
+    $('#clear-message').click(function () {
+        $('.content-error').html('').parent().find('input').removeClass('is-invalid');
+        $(this).attr('disabled', true)
     })
 })

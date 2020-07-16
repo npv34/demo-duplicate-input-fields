@@ -43,6 +43,7 @@
                         </div>
                     </div>
                     <button type="button" id="submit-form-user" class="btn btn-primary m-4">Submit</button>
+                    <button type="button" disabled id="clear-message" class="btn btn-secondly m-4">Clear message</button>
 
                 </form>
             </div>
