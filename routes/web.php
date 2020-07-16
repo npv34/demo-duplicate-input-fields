@@ -16,7 +16,7 @@ use App\Http\Requests\CreateUserRequest;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/', function (CreateUserRequest $request){
-    dd($request->all());
+Route::post('/add', function (CreateUserRequest $request){
+    return response()->json($request->all());
 })->name('add-user');
 

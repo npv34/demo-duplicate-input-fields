@@ -24,8 +24,17 @@ class CreateUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name.*' => 'required',
+            'first_name.*' => 'required|min:2',
             'last_name.*' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'first_name.*.required' => 'Trường First name không được để trống!',
+            'first_name.*.min' => 'Trường First name có ít nhất 2 ký tự!',
+            'last_name.*.required' => 'Trường Last name không được để trống!',
         ];
     }
 }
